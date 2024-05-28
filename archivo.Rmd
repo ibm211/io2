@@ -21,3 +21,32 @@ SHARON
 
 
 ANGELICA milagros
+
+
+
+
+asdaso´daspdñ
+aasdl,dasñ
+das
+d
+asñd,d
+as,d
+añs,dasd,as
+d,as
+ñas,
+das,d
+ñas,d
+ñasd,
+asd
+
+```{r}
+pexp(5,4/10)
+```
+
+
+
+```{r}
+ppois(4,4/10)
+```
+
+
