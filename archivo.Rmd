@@ -50,3 +50,20 @@ ppois(4,4/10)
 ```
 
 
+
+$$
+P(N(1/4)/wep)
+
+$$
+
+
+
+$$
+f(x)=
+\begin{cases}
+& 2B^{-2}xe^{-({\frac{x}{B})}^2}, & 0 \leq x < 1\\
+& 0, &otros.casos
+\end{cases}
+$$
+
+
