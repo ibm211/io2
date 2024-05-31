@@ -1752,48 +1752,321 @@ display: none;
 
 
 <!-- rnb-text-begin -->
-<p>HOLA MUNDO JODANSE</p>
-<p>ANGELITA LA SECRETARIA ESTRELLA</p>
-<p>aasdsdadaskdn asdjasd asd asd asd asd</p>
-<p>SHARON</p>
-<p>ANGELICA milagros</p>
-<p>asdaso´daspdñ aasdl,dasñ das d asñd,d as,d añs,dasd,as d,as ñas,
-das,d ñas,d ñasd, asd</p>
+<div id="introducción" class="section level1">
+<h1>Introducción</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGV4cCg1LDQvMTApXG5cbmBgYCJ9 -->
-<pre class="r"><code>pexp(5,4/10)
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuODY0NjY0N1xuIn0= -->
-<pre><code>[1] 0.8646647</code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="descripción-del-beso-francés" class="section level2">
+<h2>Descripción del Beso Francés</h2>
+<p>Beso Francés es una reconocida crepería que opera en diversas
+ubicaciones estratégicas, incluyendo zonas turísticas destacadas y
+centros comerciales de renombre, especificamente estamos estudiando el
+que esta ubicado en el Real Plaza de Salaverry. Su oferta principal se
+centra en la elaboración y venta de crepes tanto dulces como salados,
+complementados por una variedad de jugos naturales. Además, la empresa
+brinda atención a sus clientes a través de una plataforma en línea,
+permitiendo una experiencia de compra ágil y conveniente en el entorno
+digital.</p>
+<div class="float">
+<img src="logo.jpeg" fig-align="center" alt="Imagen 1 - Logo Beso Francés" />
+<div class="figcaption">Imagen 1 - Logo Beso Francés</div>
+</div>
+</div>
+<div id="descripcion-de-los-usuarios" class="section level2">
+<h2>Descripcion de los usuarios</h2>
+<p>Los principales usuarios de ‘Beso Francés’ son familias y parejas. El
+restaurante atrae a las familias con su menú variado que satisface a
+todas las edades, mientras que las parejas eligen el lugar para
+disfrutar de una experiencia gastronómica íntima y romántica gracias a
+su ambiente acogedor y opciones de crepes dulces y salados.</p>
+</div>
+<div id="descripción-del-proceso" class="section level2 scrollable">
+<h2 class="scrollable">Descripción del Proceso</h2>
+<p>Disciplina de llegada de los individuos al sistema.</p>
+<p>La disciplina de llegada de los clientes es un proceso estocástico,
+ya que se puede modelar mediante variables aleatorias indexadas a través
+del tiempo. Además, se puede decir que el patrón de llegada es no
+estacionario, puesto que el patrón de llegadas de clientes varía con el
+tiempo. Por otro lado, también es importante identificar señales de
+impaciencia de los usuarios al llegar a la cola (impatient customers).
+Por ejemplo, un cliente puede decidir ni siquiera entrar a la cola
+porque la percibe demasiado larga (balk). También puede darse el caso de
+que el usuario sí entra a la cola pero se sale de esta porque se “cansa”
+de esperar (renegade). Otra situación es que el cliente compita por una
+mejor posición al cambiarse de cola (jockey).</p>
+<p>Disciplina de servicio en cada una de las estaciones en donde la
+unidad reciba los servicios.</p>
+<p># Estación de Entrada</p>
+<p>El ingreso de los consumidores lo consideramos como un proceso
+estocástico y no estacionario, dado que no podemos prever la llegada de
+los mismos en el tiempo. Al realizar el muestreo de los datos,
+observamos que durante el intervalo de tiempo entre las 5:00 pm y las
+8:00 pm, que coincide con la hora punta, la cantidad de clientes era
+superior.</p>
+<p># Estación de Pedido</p>
+<p>En la estación de pedido, el tipo de disciplina que se sigue en la
+cola de atención es “First Come - First Served” (FCFS), también conocido
+como FIFO (siglas de “First In, First Out”, que en español significa
+“Primero en llegar, Primero en salir”). La política FCFS implica que el
+servicio se brinda en función del orden de llegada de los clientes. En
+otras palabras, aquel cliente que llega primero a un establecimiento es
+el que recibe la atención inicial y, a continuación, los demás clientes
+son atendidos en el orden en que llegaron, de manera sucesiva, hasta que
+se complete su tiempo de ejecución.</p>
+<p>Estación de Despacho</p>
+<p>En relación a la estación de Despacho, se implementan dos tipos de
+disciplina de llegada: FIFO y LCFS. En primer lugar, se emplea la
+disciplina FIFO (First In, First Out) para la preparación de pedidos.
+Esto implica que los pedidos se atienden en el orden en que los clientes
+los realizaron. Esta metodología se aplica cuando los pedidos pueden ser
+procesados en función del área, ya sea crepes o bebidas frías y
+calientes. En segundo lugar, se utiliza la disciplina LCFS (Last Come,
+First Served), también conocida como LIFO (Last In, First Out), para la
+atención de clientes. Bajo este enfoque, se prioriza al cliente más
+reciente en llegar, lo que puede ser relevante cuando hay una cola de
+espera en la preparación de crepes y no hay una cola en la preparación
+de bebidas. Es importante destacar que estas disciplinas de llegada
+influyen en la manera en que se atienden los pedidos en la estación de
+Despacho, ofreciendo diferentes prioridades y tiempos de atención en
+función de la situación y la demanda.</p>
+<p>Estación de Consumo</p>
+<p>La duración del consumo del pedido por parte de un cliente es
+impredecible, ya que está influenciada por factores como el tipo y
+tamaño de la orden, así como la cantidad de personas en el lugar. Estas
+variables en constante cambio hacen que el tiempo de consumo varía entre
+diferentes clientes. Como resultado, el proceso en la estación de
+consumo se caracteriza como un proceso estocástico no estacionario,
+debido a su naturaleza impredecible y dependiente de múltiples
+factores.</p>
+<p>Número de Estaciones de Servicio</p>
+<p>Las estaciones de servicio hacen referencia a los puntos donde
+ofrecen servicios, teniendo esto en cuenta, las estaciones de servicio
+implementadas en Beso Francés-Salaverry son: Estación de pedido/pago.-
+El módulo del local cuenta con dos cajas de pago en las cuales puedes
+pedir y pagar por los pedidos. Estación de consumo.- Cuentan con 13
+mesas y 2 sillas en las cuales puedes esperar hasta que esté tu
+pedido.</p>
+<p>Número de Canales de servicio</p>
+<p>Sistema de canales de pago: Existe un sistema multicanal paralelo que
+alimenta 2 cajas de pago.</p>
+<p>Canal de entrega del pedido: Mediante este canal, dos personas
+designadas se encargan de entregar los pedidos a las mesas.</p>
+</div>
+<div id="tipos-de-clientes" class="section level2">
+<h2>Tipos de Clientes</h2>
+<p>Tenemos tres tipo de clientes, los cuales se explican a
+continuación:</p>
+<p>Tipo C: Cliente que consume en el local.</p>
+<p>Tipo LL: Cliente que pide para llevar.</p>
+<p>Tipo NC: Cliente que no hace ningun pedido.</p>
+</div>
+<div id="capacidad-del-sistema." class="section level2">
+<h2>Capacidad del sistema.</h2>
+<p>La crepería se encuentra ubicado en el 4to piso del centro comercial
+Real Plaza Salaverry donde se pudieron notar algunas observaciones:</p>
+<ul>
+<li><p>El local cuenta con un módulo central en el pasillo central, por
+lo que no cuenta con un aforo designado para el número de personas
+debido a que es una zona muy transitada.</p></li>
+<li><p>Detrás del módulo, se encuentra un espacio con 8 cómodos sofás,
+cada uno acompañado de 2 sillas aparte, brindando un total de 24
+asientos. por lo que permite una distribución flexible para adaptarse a
+las preferencias de los clientes y el flujo constante en el entorno
+comercial.</p></li>
+<li><p>Se puede observar que se genera una cola de 3 a 5 clientes
+durante las horas pico registradas en la operación del
+servicio.</p></li>
+</ul>
+<div class="float">
+<img src="dos.png" fig-align="center" width="675" alt="Imagen 2 - Layout" />
+<div class="figcaption">Imagen 2 - Layout</div>
+</div>
+</div>
+<div id="número-de-canales-de-servicio." class="section level2">
+<h2>Número de canales de servicio.</h2>
+<ul>
+<li><p>Sistema de canales de pago: Existe un sistema multicanal paralelo
+que alimenta 2 cajas de pago. El servicio de canal no es excluyente pues
+un cliente puede pasar de una cola a otra (Ejemplo: Un usuario se
+encuentra en una cola pero ve que la otra cola es de menor tamaño así
+que decide cambiarse).</p></li>
+<li><p>Canal de entrega del pedido: Mediante este canal, dos personas
+designadas se encargan de entregar los pedidos a las mesas.</p></li>
+</ul>
+</div>
+<div id="número-de-estaciones-de-servicio." class="section level2">
+<h2>Número de estaciones de servicio.</h2>
+<p>Las estaciones de servicio hacen referencia a los puntos donde
+ofrecen servicios, teniendo esto en cuenta, las estaciones de servicio
+implementadas en Beso Francés-Salaverry son:</p>
+<p>Estación de pedidos presencial.- El módulo del local cuenta con dos
+cajeros en los cuales puedes pedir y pagar por los pedidos.</p>
+<p>Estación de pedidos virtual.- La página web de Beso Francés cuenta
+con la carta y ofertas especiales, además de poder seleccionar si deseas
+recogerlo en la misma tienda o delivery.</p>
+<p>Área de espera.- Cuentan con 8 mesas y 2 sillas en las cuales puedes
+esperar hasta que esté tu pedido.</p>
+</div>
+<div id="problemas-identificados" class="section level2">
+<h2>Problemas Identificados</h2>
+<p>El Beso Frances ubicada en el Real Plaza de Salaverry presenta los
+siguientes problemas:</p>
+<div id="tiempo-de-espera-en-la-cola" class="section level4">
+<h4>Tiempo de espera en la cola:</h4>
+<p>La problemática del tiempo de espera en la cola se presenta como una
+preocupación significativa para los clientes, especialmente durante las
+horas pico en las que la afluencia de visitantes es más intensa. Este
+inconveniente puede generar frustración entre los clientes, afectando su
+experiencia y percepción del servicio ofrecido.</p>
+</div>
+<div id="tiempo-de-atención-en-caja" class="section level4">
+<h4>Tiempo de atención en caja:</h4>
+<p>La percepción de que el proceso de registro de pedidos en caja es
+lento y poco eficiente es una inquietud válida expresada por los
+clientes. La eficiencia en la atención en caja es crucial para
+proporcionar una experiencia de servicio rápida y satisfactoria.</p>
+</div>
+<div id="congestion-en-el-area-de-consumo" class="section level4">
+<h4>Congestion en el area de consumo:</h4>
+<p>especialmente en un entorno comercial como el Centro Comercial
+Salaverry, puede ser un desafío significativo. Dada la naturaleza del
+lugar, donde los consumidores tienden a aprovechar el espacio para
+socializar, relajarse o realizar actividades sociales, es común que las
+mesas estén ocupadas durante períodos prolongados.</p>
+</div>
+</div>
+<div id="preguntas-de-interes" class="section level2">
+<h2>Preguntas de Interes</h2>
+<p>Inferenciales</p>
+<p>¿Cuál sería el efecto en la atracción de posibles clientes si se
+disminuye la cantidad de personas en la fila de espera en la estación de
+pago/pedido, teniendo en cuenta un servicio más ágil en comparación con
+el tiempo promedio entre llegadas?</p>
+<p>¿Hay diferencias significativas en los tiempos de espera entre
+diferentes mesas?</p>
+<p>¿Puedes inferir la distribución del tiempo en que los clientes se
+retiran de la tienda?</p>
+<p>¿Hay una diferencia significativa en el tiempo de espera entre
+clientes que ocupan mesas y los que piden para llevar?</p>
+<p>Predictivas</p>
+<p>Considerando que los clientes que se van sin consumir generan
+pérdidas para el negocio, ¿cuántos clientes en promedio en la fila del
+cajero provocan una mayor probabilidad de que haya clientes
+renegados?</p>
+<p>¿Puedes desarrollar un modelo predictivo para estimar el tiempo
+promedio que un cliente pasará en la crepería?</p>
+<p>Causales</p>
+<p>Si se busca reducir los tiempos de espera en la estación de
+pago/pedido, ¿cómo afectaría el tiempo total del sistema si ambas cajas
+de la estación de pago/pedido estuvieran abiertas de manera
+continua?</p>
+<p>Considerando que la zona de atención en caja es el cuello de botella
+del sistema ¿Cómo afectaría el tiempo de atención en caja al tiempo al
+tiempo total del sistema?, tiempo de espera, tamaño de la cola</p>
+<p>¿Existe una relación causal entre el número de mesas ocupadas y el
+tiempo de espera en la cola?</p>
+<p>¿Existe una relación causal entre el número de mesas ocupadas y el
+tamaño de la cola?</p>
+</div>
+<div id="indicadores-de-interes" class="section level2">
+<h2>Indicadores de Interes</h2>
+<p>Se plantean los siguientes indicadores:</p>
+<div id="indicador-de-eficiencia" class="section level4">
+<h4>Indicador de eficiencia</h4>
+</div>
+<div id="de-clientes-que-se-retiran" class="section level4">
+<h4>*% de clientes que se retiran</h4>
+</div>
+<div id="tiempo-promedio-de-espera-en-cola-hasta-ser-atendido" class="section level4">
+<h4>Tiempo promedio de espera en cola hasta ser atendido</h4>
+</div>
+<div id="tiempo-promedio-de-espera-de-pedido." class="section level4">
+<h4>Tiempo promedio de espera de pedido.</h4>
+</div>
+<div id="flujo-de-llegada-de-clientes-por-hora" class="section level4">
+<h4>Flujo de llegada de clientes por hora</h4>
+</div>
+</div>
+<div id="limitaciones" class="section level2">
+<h2>Limitaciones</h2>
+<p>De acuerdo a la toma de muestras, se priorizo considerablemente el
+tiempo de espera en la cola, las cajas y mesas ocupadas durante las
+horas pico de la operación.</p>
+<p>Se tomó en cuenta realizar la recolección de datos en el 5to piso del
+Centro comercial debido a la ubicación del módulo.</p>
+</div>
+<div id="variables-que-se-utilizó-para-recoger-nuestro-pre-muestreo-y-muestra" class="section level2 scrollable">
+<h2 class="scrollable">Variables que se utilizó para recoger nuestro pre
+muestreo y muestra</h2>
+<ul>
+<li>Tipo de Cliente</li>
+<li>Tipo de Tamaño de grupo del Cliente</li>
+<li>Tamaño de grupo</li>
+<li>Hora en que llega un nuevo cliente</li>
+<li>Hora en que inicia el pedido</li>
+<li>Hora en que finaliza el pedido</li>
+<li>Hora de entrega del pedido</li>
+<li>Hora en que se retira de la tienda</li>
+<li>Numero de mesa</li>
+<li>Numero de caja</li>
+<li>Numero de cajas activa</li>
+</ul>
+<p><img src="plantilla.jpeg" /></p>
+</div>
+<div id="variables-de-interes" class="section level2">
+<h2>Variables de interes</h2>
+<ul>
+<li>Tiempo entre llegadas</li>
+<li>Tiempo de espera en la cola</li>
+<li>Tiempo de espera para el pedido</li>
+<li>Tiempo de espera hasta retirarse</li>
+<li>Tiempo total del sistema</li>
+</ul>
+</div>
+<div id="calculo-del-tamaño-de-la-muestra" class="section level2">
+<h2>Calculo del tamaño de la muestra</h2>
+<p><span class="math inline">\(P\left(\left|\overline{X}_n-\mu
+\right|&lt;T\right)\ge 1\:-\:\alpha\)</span></p>
+<p><span class="math inline">\(P\left(\left|\frac{\overline{X}_n-\mu
+\:}{\frac{\sigma }{\sqrt{n}}}\right|&lt;\frac{T}{\frac{\sigma
+\:}{\sqrt{n}}}\right)\ge 1\:-\:\alpha\)</span></p>
+<p><span class="math inline">\(\phi \left(\frac{T}{\frac{\sigma
+}{\sqrt{n}}}\right)-\phi \left(-\frac{T}{\frac{\sigma
+}{\sqrt{n}}}\right)\ge 1-\alpha\)</span></p>
+<p><span class="math inline">\(2\phi \left(\frac{T}{\frac{\sigma
+}{\sqrt{n}}}\right)\ge 1-\alpha\)</span></p>
+<p><span class="math inline">\(\phi ^{-1}\left(\phi
+\left(\frac{T}{\frac{\sigma }{\sqrt{n}}}\right)\right)\ge \phi
+^{-1}\left(\frac{2-\alpha }{2}\right)\)</span></p>
+<p><span class="math inline">\(n\ge
+\left(qnorm\left(\frac{NC}{2}\right)\cdot \left(\frac{\sigma
+}{3}\right)\right)^2\)</span></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHBvaXMoNCw0LzEwKVxuXG5gYGAifQ== -->
-<pre class="r"><code>ppois(4,4/10)
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuOTk5OTM4OFxuIn0= -->
-<pre><code>[1] 0.9999388</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>$$ P(N(1/4)/wep)</p>
-<p>$$</p>
-<p><span class="math display">\[
-f(x)=
-\begin{cases}
-&amp; 2B^{-2}xe^{-({\frac{x}{B})}^2}, &amp; 0 \leq x &lt; 1\\
-&amp; 0, &amp;otros.casos
-\end{cases}
-\]</span></p>
-<p>asdasdasd asd asd asd as das d asd sad</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="tamaño-de-la-muestra" class="section level2">
+<h2>Tamaño de la muestra</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpIT0xBIE1VTkRPIEpPREFOU0UNCg0KDQpBTkdFTElUQSBMQSBTRUNSRVRBUklBIEVTVFJFTExBIA0KDQphYXNkc2RhZGFza2RuDQphc2RqYXNkDQphc2QNCmFzZA0KYXNkDQphc2QNCg0KDQpTSEFST04gDQoNCg0KDQpBTkdFTElDQSBtaWxhZ3Jvcw0KDQoNCg0KDQphc2Rhc2/CtGRhc3Bkw7ENCmFhc2RsLGRhc8OxDQpkYXMNCmQNCmFzw7FkLGQNCmFzLGQNCmHDsXMsZGFzZCxhcw0KZCxhcw0Kw7FhcywNCmRhcyxkDQrDsWFzLGQNCsOxYXNkLA0KYXNkDQoNCmBgYHtyfQ0KcGV4cCg1LDQvMTApDQpgYGANCg0KDQoNCmBgYHtyfQ0KcHBvaXMoNCw0LzEwKQ0KYGBgDQoNCg0KDQokJA0KUChOKDEvNCkvd2VwKQ0KDQokJA0KDQoNCg0KJCQNCmYoeCk9DQpcYmVnaW57Y2FzZXN9DQomIDJCXnstMn14ZV57LSh7XGZyYWN7eH17Qn0pfV4yfSwgJiAwIFxsZXEgeCA8IDFcXA0KJiAwLCAmb3Ryb3MuY2Fzb3MNClxlbmR7Y2FzZXN9DQokJA0KDQoNCmFzZGFzZGFzZA0KYXNkDQphc2QNCmFzZA0KYXMNCmRhcw0KZA0KYXNkDQpzYWQ=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojIEludHJvZHVjY2nDs24NCg0KYGBge3IsZWNobz1GQUxTRSxtZXNzYWdlPUZBTFNFLHdhcm5pbmc9RkFMU0V9DQpsaWJyYXJ5KHJlYWRyKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KG1vZGVlc3QpDQpsaWJyYXJ5KGZpdGRpc3RycGx1cykNCnJlcXVpcmUocmVzaGFwZSkNCmBgYA0KDQojIyBEZXNjcmlwY2nDs24gZGVsIEJlc28gRnJhbmPDqXMNCg0KIA0KQmVzbyBGcmFuY8OpcyBlcyB1bmEgcmVjb25vY2lkYSBjcmVwZXLDrWEgcXVlIG9wZXJhIGVuIGRpdmVyc2FzIHViaWNhY2lvbmVzIGVzdHJhdMOpZ2ljYXMsIGluY2x1eWVuZG8gem9uYXMgdHVyw61zdGljYXMgZGVzdGFjYWRhcyB5IGNlbnRyb3MgY29tZXJjaWFsZXMgZGUgcmVub21icmUsIGVzcGVjaWZpY2FtZW50ZSBlc3RhbW9zIGVzdHVkaWFuZG8gZWwgcXVlIGVzdGEgdWJpY2FkbyBlbiBlbCBSZWFsIFBsYXphIGRlIFNhbGF2ZXJyeS4gU3Ugb2ZlcnRhIHByaW5jaXBhbCBzZSBjZW50cmEgZW4gbGEgZWxhYm9yYWNpw7NuIHkgdmVudGEgZGUgY3JlcGVzIHRhbnRvIGR1bGNlcyBjb21vIHNhbGFkb3MsIGNvbXBsZW1lbnRhZG9zIHBvciB1bmEgdmFyaWVkYWQgZGUganVnb3MgbmF0dXJhbGVzLiBBZGVtw6FzLCBsYSBlbXByZXNhIGJyaW5kYSBhdGVuY2nDs24gYSBzdXMgY2xpZW50ZXMgYSB0cmF2w6lzIGRlIHVuYSBwbGF0YWZvcm1hIGVuIGzDrW5lYSwgcGVybWl0aWVuZG8gdW5hIGV4cGVyaWVuY2lhIGRlIGNvbXByYSDDoWdpbCB5IGNvbnZlbmllbnRlIGVuIGVsIGVudG9ybm8gZGlnaXRhbC4NCiANCg0KIVtJbWFnZW4gMSAtIExvZ28gQmVzbyBGcmFuY8Opc10obG9nby5qcGVnKXtmaWctYWxpZ249ImNlbnRlciJ9DQoNCiMjIERlc2NyaXBjaW9uIGRlIGxvcyB1c3Vhcmlvcw0KDQogDQpMb3MgcHJpbmNpcGFsZXMgdXN1YXJpb3MgZGUgJ0Jlc28gRnJhbmPDqXMnIHNvbiBmYW1pbGlhcyB5IHBhcmVqYXMuIEVsIHJlc3RhdXJhbnRlIGF0cmFlIGEgbGFzIGZhbWlsaWFzIGNvbiBzdSBtZW7DuiB2YXJpYWRvIHF1ZSBzYXRpc2ZhY2UgYSB0b2RhcyBsYXMgZWRhZGVzLCBtaWVudHJhcyBxdWUgbGFzIHBhcmVqYXMgZWxpZ2VuIGVsIGx1Z2FyIHBhcmEgZGlzZnJ1dGFyIGRlIHVuYSBleHBlcmllbmNpYSBnYXN0cm9uw7NtaWNhIMOtbnRpbWEgeSByb23DoW50aWNhIGdyYWNpYXMgYSBzdSBhbWJpZW50ZSBhY29nZWRvciB5IG9wY2lvbmVzIGRlIGNyZXBlcyBkdWxjZXMgeSBzYWxhZG9zLg0KIA0KDQojIyBEZXNjcmlwY2nDs24gZGVsIFByb2Nlc28gey5zY3JvbGxhYmxlfQ0KDQogDQpEaXNjaXBsaW5hIGRlIGxsZWdhZGEgZGUgbG9zIGluZGl2aWR1b3MgYWwgc2lzdGVtYS4NCg0KTGEgZGlzY2lwbGluYSBkZSBsbGVnYWRhIGRlIGxvcyBjbGllbnRlcyBlcyB1biBwcm9jZXNvIGVzdG9jw6FzdGljbywgeWEgcXVlIHNlIHB1ZWRlIG1vZGVsYXIgbWVkaWFudGUgdmFyaWFibGVzIGFsZWF0b3JpYXMgaW5kZXhhZGFzIGEgdHJhdsOpcyBkZWwgdGllbXBvLiBBZGVtw6FzLCBzZSBwdWVkZSBkZWNpciBxdWUgZWwgcGF0csOzbiBkZSBsbGVnYWRhIGVzIG5vIGVzdGFjaW9uYXJpbywgcHVlc3RvIHF1ZSBlbCBwYXRyw7NuIGRlIGxsZWdhZGFzIGRlIGNsaWVudGVzIHZhcsOtYSBjb24gZWwgdGllbXBvLiBQb3Igb3RybyBsYWRvLCB0YW1iacOpbiBlcyBpbXBvcnRhbnRlIGlkZW50aWZpY2FyIHNlw7FhbGVzIGRlIGltcGFjaWVuY2lhIGRlIGxvcyB1c3VhcmlvcyBhbCBsbGVnYXIgYSBsYSBjb2xhIChpbXBhdGllbnQgY3VzdG9tZXJzKS4gUG9yIGVqZW1wbG8sIHVuIGNsaWVudGUgcHVlZGUgZGVjaWRpciBuaSBzaXF1aWVyYSBlbnRyYXIgYSBsYSBjb2xhIHBvcnF1ZSBsYSBwZXJjaWJlIGRlbWFzaWFkbyBsYXJnYSAoYmFsaykuIFRhbWJpw6luIHB1ZWRlIGRhcnNlIGVsIGNhc28gZGUgcXVlIGVsIHVzdWFyaW8gc8OtIGVudHJhIGEgbGEgY29sYSBwZXJvIHNlIHNhbGUgZGUgZXN0YSBwb3JxdWUgc2UgImNhbnNhIiBkZSBlc3BlcmFyIChyZW5lZ2FkZSkuIE90cmEgc2l0dWFjacOzbiBlcyBxdWUgZWwgY2xpZW50ZSBjb21waXRhIHBvciB1bmEgbWVqb3IgcG9zaWNpw7NuIGFsIGNhbWJpYXJzZSBkZSBjb2xhIChqb2NrZXkpLg0KIA0KDQpEaXNjaXBsaW5hIGRlIHNlcnZpY2lvIGVuIGNhZGEgdW5hIGRlIGxhcyBlc3RhY2lvbmVzIGVuIGRvbmRlIGxhIHVuaWRhZCByZWNpYmEgbG9zIHNlcnZpY2lvcy4NCg0KXCMgRXN0YWNpw7NuIGRlIEVudHJhZGENCg0KIA0KRWwgaW5ncmVzbyBkZSBsb3MgY29uc3VtaWRvcmVzIGxvIGNvbnNpZGVyYW1vcyBjb21vIHVuIHByb2Nlc28gZXN0b2PDoXN0aWNvIHkgbm8gZXN0YWNpb25hcmlvLCBkYWRvIHF1ZSBubyBwb2RlbW9zIHByZXZlciBsYSBsbGVnYWRhIGRlIGxvcyBtaXNtb3MgZW4gZWwgdGllbXBvLiBBbCByZWFsaXphciBlbCBtdWVzdHJlbyBkZSBsb3MgZGF0b3MsIG9ic2VydmFtb3MgcXVlIGR1cmFudGUgZWwgaW50ZXJ2YWxvIGRlIHRpZW1wbyBlbnRyZSBsYXMgNTowMCBwbSB5IGxhcyA4OjAwIHBtLCBxdWUgY29pbmNpZGUgY29uIGxhIGhvcmEgcHVudGEsIGxhIGNhbnRpZGFkIGRlIGNsaWVudGVzIGVyYSBzdXBlcmlvci4NCiANCg0KXCMgRXN0YWNpw7NuIGRlIFBlZGlkbw0KDQogDQpFbiBsYSBlc3RhY2nDs24gZGUgcGVkaWRvLCBlbCB0aXBvIGRlIGRpc2NpcGxpbmEgcXVlIHNlIHNpZ3VlIGVuIGxhIGNvbGEgZGUgYXRlbmNpw7NuIGVzICJGaXJzdCBDb21lIC0gRmlyc3QgU2VydmVkIiAoRkNGUyksIHRhbWJpw6luIGNvbm9jaWRvIGNvbW8gRklGTyAoc2lnbGFzIGRlICJGaXJzdCBJbiwgRmlyc3QgT3V0IiwgcXVlIGVuIGVzcGHDsW9sIHNpZ25pZmljYSAiUHJpbWVybyBlbiBsbGVnYXIsIFByaW1lcm8gZW4gc2FsaXIiKS4gTGEgcG9sw610aWNhIEZDRlMgaW1wbGljYSBxdWUgZWwgc2VydmljaW8gc2UgYnJpbmRhIGVuIGZ1bmNpw7NuIGRlbCBvcmRlbiBkZSBsbGVnYWRhIGRlIGxvcyBjbGllbnRlcy4gRW4gb3RyYXMgcGFsYWJyYXMsIGFxdWVsIGNsaWVudGUgcXVlIGxsZWdhIHByaW1lcm8gYSB1biBlc3RhYmxlY2ltaWVudG8gZXMgZWwgcXVlIHJlY2liZSBsYSBhdGVuY2nDs24gaW5pY2lhbCB5LCBhIGNvbnRpbnVhY2nDs24sIGxvcyBkZW3DoXMgY2xpZW50ZXMgc29uIGF0ZW5kaWRvcyBlbiBlbCBvcmRlbiBlbiBxdWUgbGxlZ2Fyb24sIGRlIG1hbmVyYSBzdWNlc2l2YSwgaGFzdGEgcXVlIHNlIGNvbXBsZXRlIHN1IHRpZW1wbyBkZSBlamVjdWNpw7NuLg0KIA0KDQpFc3RhY2nDs24gZGUgRGVzcGFjaG8NCg0KIA0KRW4gcmVsYWNpw7NuIGEgbGEgZXN0YWNpw7NuIGRlIERlc3BhY2hvLCBzZSBpbXBsZW1lbnRhbiBkb3MgdGlwb3MgZGUgZGlzY2lwbGluYSBkZSBsbGVnYWRhOiBGSUZPIHkgTENGUy4gRW4gcHJpbWVyIGx1Z2FyLCBzZSBlbXBsZWEgbGEgZGlzY2lwbGluYSBGSUZPIChGaXJzdCBJbiwgRmlyc3QgT3V0KSBwYXJhIGxhIHByZXBhcmFjacOzbiBkZSBwZWRpZG9zLiBFc3RvIGltcGxpY2EgcXVlIGxvcyBwZWRpZG9zIHNlIGF0aWVuZGVuIGVuIGVsIG9yZGVuIGVuIHF1ZSBsb3MgY2xpZW50ZXMgbG9zIHJlYWxpemFyb24uIEVzdGEgbWV0b2RvbG9nw61hIHNlIGFwbGljYSBjdWFuZG8gbG9zIHBlZGlkb3MgcHVlZGVuIHNlciBwcm9jZXNhZG9zIGVuIGZ1bmNpw7NuIGRlbCDDoXJlYSwgeWEgc2VhIGNyZXBlcyBvIGJlYmlkYXMgZnLDrWFzIHkgY2FsaWVudGVzLiBFbiBzZWd1bmRvIGx1Z2FyLCBzZSB1dGlsaXphIGxhIGRpc2NpcGxpbmEgTENGUyAoTGFzdCBDb21lLCBGaXJzdCBTZXJ2ZWQpLCB0YW1iacOpbiBjb25vY2lkYSBjb21vIExJRk8gKExhc3QgSW4sIEZpcnN0IE91dCksIHBhcmEgbGEgYXRlbmNpw7NuIGRlIGNsaWVudGVzLiBCYWpvIGVzdGUgZW5mb3F1ZSwgc2UgcHJpb3JpemEgYWwgY2xpZW50ZSBtw6FzIHJlY2llbnRlIGVuIGxsZWdhciwgbG8gcXVlIHB1ZWRlIHNlciByZWxldmFudGUgY3VhbmRvIGhheSB1bmEgY29sYSBkZSBlc3BlcmEgZW4gbGEgcHJlcGFyYWNpw7NuIGRlIGNyZXBlcyB5IG5vIGhheSB1bmEgY29sYSBlbiBsYSBwcmVwYXJhY2nDs24gZGUgYmViaWRhcy4gRXMgaW1wb3J0YW50ZSBkZXN0YWNhciBxdWUgZXN0YXMgZGlzY2lwbGluYXMgZGUgbGxlZ2FkYSBpbmZsdXllbiBlbiBsYSBtYW5lcmEgZW4gcXVlIHNlIGF0aWVuZGVuIGxvcyBwZWRpZG9zIGVuIGxhIGVzdGFjacOzbiBkZSBEZXNwYWNobywgb2ZyZWNpZW5kbyBkaWZlcmVudGVzIHByaW9yaWRhZGVzIHkgdGllbXBvcyBkZSBhdGVuY2nDs24gZW4gZnVuY2nDs24gZGUgbGEgc2l0dWFjacOzbiB5IGxhIGRlbWFuZGEuDQogDQoNCkVzdGFjacOzbiBkZSBDb25zdW1vDQoNCiANCkxhIGR1cmFjacOzbiBkZWwgY29uc3VtbyBkZWwgcGVkaWRvIHBvciBwYXJ0ZSBkZSB1biBjbGllbnRlIGVzIGltcHJlZGVjaWJsZSwgeWEgcXVlIGVzdMOhIGluZmx1ZW5jaWFkYSBwb3IgZmFjdG9yZXMgY29tbyBlbCB0aXBvIHkgdGFtYcOxbyBkZSBsYSBvcmRlbiwgYXPDrSBjb21vIGxhIGNhbnRpZGFkIGRlIHBlcnNvbmFzIGVuIGVsIGx1Z2FyLiBFc3RhcyB2YXJpYWJsZXMgZW4gY29uc3RhbnRlIGNhbWJpbyBoYWNlbiBxdWUgZWwgdGllbXBvIGRlIGNvbnN1bW8gdmFyw61hIGVudHJlIGRpZmVyZW50ZXMgY2xpZW50ZXMuIENvbW8gcmVzdWx0YWRvLCBlbCBwcm9jZXNvIGVuIGxhIGVzdGFjacOzbiBkZSBjb25zdW1vIHNlIGNhcmFjdGVyaXphIGNvbW8gdW4gcHJvY2VzbyBlc3RvY8Ohc3RpY28gbm8gZXN0YWNpb25hcmlvLCBkZWJpZG8gYSBzdSBuYXR1cmFsZXphIGltcHJlZGVjaWJsZSB5IGRlcGVuZGllbnRlIGRlIG3Dumx0aXBsZXMgZmFjdG9yZXMuDQogDQoNCk7Dum1lcm8gZGUgRXN0YWNpb25lcyBkZSBTZXJ2aWNpbw0KDQogDQpMYXMgZXN0YWNpb25lcyBkZSBzZXJ2aWNpbyBoYWNlbiByZWZlcmVuY2lhIGEgbG9zIHB1bnRvcyBkb25kZSBvZnJlY2VuIHNlcnZpY2lvcywgdGVuaWVuZG8gZXN0byBlbiBjdWVudGEsIGxhcyBlc3RhY2lvbmVzIGRlIHNlcnZpY2lvIGltcGxlbWVudGFkYXMgZW4gQmVzbyBGcmFuY8Opcy1TYWxhdmVycnkgc29uOiBFc3RhY2nDs24gZGUgcGVkaWRvL3BhZ28uLSBFbCBtw7NkdWxvIGRlbCBsb2NhbCBjdWVudGEgY29uIGRvcyBjYWphcyBkZSBwYWdvIGVuIGxhcyBjdWFsZXMgcHVlZGVzIHBlZGlyIHkgcGFnYXIgcG9yIGxvcyBwZWRpZG9zLiBFc3RhY2nDs24gZGUgY29uc3Vtby4tIEN1ZW50YW4gY29uIDEzIG1lc2FzIHkgMiBzaWxsYXMgZW4gbGFzIGN1YWxlcyBwdWVkZXMgZXNwZXJhciBoYXN0YSBxdWUgZXN0w6kgdHUgcGVkaWRvLg0KDQpOw7ptZXJvIGRlIENhbmFsZXMgZGUgc2VydmljaW8NCg0KU2lzdGVtYSBkZSBjYW5hbGVzIGRlIHBhZ286IEV4aXN0ZSB1biBzaXN0ZW1hIG11bHRpY2FuYWwgcGFyYWxlbG8gcXVlIGFsaW1lbnRhIDIgY2FqYXMgZGUgcGFnby4NCg0KQ2FuYWwgZGUgZW50cmVnYSBkZWwgcGVkaWRvOiBNZWRpYW50ZSBlc3RlIGNhbmFsLCBkb3MgcGVyc29uYXMgZGVzaWduYWRhcyBzZSBlbmNhcmdhbiBkZSBlbnRyZWdhciBsb3MgcGVkaWRvcyBhIGxhcyBtZXNhcy4NCiANCg0KIyMgVGlwb3MgZGUgQ2xpZW50ZXMNCg0KIA0KVGVuZW1vcyB0cmVzIHRpcG8gZGUgY2xpZW50ZXMsIGxvcyBjdWFsZXMgc2UgZXhwbGljYW4gYSBjb250aW51YWNpw7NuOg0KDQpUaXBvIEM6IENsaWVudGUgcXVlIGNvbnN1bWUgZW4gZWwgbG9jYWwuDQoNClRpcG8gTEw6IENsaWVudGUgcXVlIHBpZGUgcGFyYSBsbGV2YXIuDQoNClRpcG8gTkM6IENsaWVudGUgcXVlIG5vIGhhY2UgbmluZ3VuIHBlZGlkby4NCiANCg0KIyMgQ2FwYWNpZGFkIGRlbCBzaXN0ZW1hLg0KDQogDQpMYSBjcmVwZXLDrWEgc2UgZW5jdWVudHJhwqB1YmljYWRvIGVuIGVsIDR0byBwaXNvIGRlbCBjZW50cm8gY29tZXJjaWFsIFJlYWwgUGxhemEgU2FsYXZlcnJ5IGRvbmRlIHNlIHB1ZGllcm9uIG5vdGFyIGFsZ3VuYXMgb2JzZXJ2YWNpb25lczoNCg0KLSAgIEVsIGxvY2FsIGN1ZW50YSBjb24gdW4gbcOzZHVsbyBjZW50cmFsIGVuIGVsIHBhc2lsbG8gY2VudHJhbCwgcG9yIGxvIHF1ZSBubyBjdWVudGEgY29uIHVuIGFmb3JvIGRlc2lnbmFkbyBwYXJhIGVsIG7Dum1lcm8gZGUgcGVyc29uYXMgZGViaWRvIGEgcXVlIGVzIHVuYSB6b25hIG11eSB0cmFuc2l0YWRhLg0KDQotICAgRGV0csOhcyBkZWwgbcOzZHVsbywgc2UgZW5jdWVudHJhIHVuIGVzcGFjaW8gY29uIDggY8OzbW9kb3Mgc29mw6FzLCBjYWRhIHVubyBhY29tcGHDsWFkbyBkZSAyIHNpbGxhcyBhcGFydGUsIGJyaW5kYW5kbyB1biB0b3RhbCBkZSAyNCBhc2llbnRvcy4gcG9yIGxvIHF1ZSBwZXJtaXRlIHVuYSBkaXN0cmlidWNpw7NuIGZsZXhpYmxlIHBhcmEgYWRhcHRhcnNlIGEgbGFzIHByZWZlcmVuY2lhcyBkZSBsb3MgY2xpZW50ZXMgeSBlbCBmbHVqbyBjb25zdGFudGUgZW4gZWwgZW50b3JubyBjb21lcmNpYWwuDQoNCi0gICBTZSBwdWVkZSBvYnNlcnZhciBxdWUgc2UgZ2VuZXJhIHVuYSBjb2xhIGRlIDMgYSA1IGNsaWVudGVzIGR1cmFudGUgbGFzIGhvcmFzIHBpY28gcmVnaXN0cmFkYXMgZW4gbGEgb3BlcmFjacOzbiBkZWwgc2VydmljaW8uDQogDQoNCiFbSW1hZ2VuIDIgLSBMYXlvdXRdKGRvcy5wbmcpe2ZpZy1hbGlnbj0iY2VudGVyIiB3aWR0aD0iNjc1In0NCg0KIyMgTsO6bWVybyBkZSBjYW5hbGVzIGRlIHNlcnZpY2lvLg0KDQogDQotICAgU2lzdGVtYSBkZSBjYW5hbGVzIGRlIHBhZ286IEV4aXN0ZSB1biBzaXN0ZW1hIG11bHRpY2FuYWwgcGFyYWxlbG8gcXVlIGFsaW1lbnRhIDIgY2FqYXMgZGUgcGFnby4gRWwgc2VydmljaW8gZGUgY2FuYWwgbm8gZXMgZXhjbHV5ZW50ZSBwdWVzIHVuIGNsaWVudGUgcHVlZGUgcGFzYXIgZGUgdW5hIGNvbGEgYSBvdHJhIChFamVtcGxvOiBVbiB1c3VhcmlvIHNlIGVuY3VlbnRyYSBlbiB1bmEgY29sYSBwZXJvIHZlIHF1ZSBsYSBvdHJhIGNvbGEgZXMgZGUgbWVub3IgdGFtYcOxbyBhc8OtIHF1ZSBkZWNpZGUgY2FtYmlhcnNlKS4NCg0KLSAgIENhbmFsIGRlIGVudHJlZ2EgZGVsIHBlZGlkbzogTWVkaWFudGUgZXN0ZSBjYW5hbCwgZG9zIHBlcnNvbmFzIGRlc2lnbmFkYXMgc2UgZW5jYXJnYW4gZGUgZW50cmVnYXIgbG9zIHBlZGlkb3MgYSBsYXMgbWVzYXMuDQogDQoNCiMjIE7Dum1lcm8gZGUgZXN0YWNpb25lcyBkZSBzZXJ2aWNpby4NCg0KIA0KTGFzIGVzdGFjaW9uZXMgZGUgc2VydmljaW8gaGFjZW4gcmVmZXJlbmNpYSBhIGxvcyBwdW50b3MgZG9uZGUgb2ZyZWNlbiBzZXJ2aWNpb3MsIHRlbmllbmRvIGVzdG8gZW4gY3VlbnRhLCBsYXMgZXN0YWNpb25lcyBkZSBzZXJ2aWNpbyBpbXBsZW1lbnRhZGFzIGVuIEJlc28gRnJhbmPDqXMtU2FsYXZlcnJ5IHNvbjoNCg0KRXN0YWNpw7NuIGRlIHBlZGlkb3MgcHJlc2VuY2lhbC4tIEVsIG3Ds2R1bG8gZGVsIGxvY2FsIGN1ZW50YSBjb24gZG9zIGNhamVyb3MgZW4gbG9zIGN1YWxlcyBwdWVkZXMgcGVkaXIgeSBwYWdhciBwb3IgbG9zIHBlZGlkb3MuDQoNCkVzdGFjacOzbiBkZSBwZWRpZG9zIHZpcnR1YWwuLSBMYSBww6FnaW5hIHdlYiBkZSBCZXNvIEZyYW5jw6lzIGN1ZW50YSBjb24gbGEgY2FydGEgeSBvZmVydGFzIGVzcGVjaWFsZXMsIGFkZW3DoXMgZGUgcG9kZXIgc2VsZWNjaW9uYXIgc2kgZGVzZWFzIHJlY29nZXJsbyBlbiBsYSBtaXNtYSB0aWVuZGEgbyBkZWxpdmVyeS4NCg0Kw4FyZWEgZGUgZXNwZXJhLi0gQ3VlbnRhbiBjb24gOCBtZXNhcyB5IDIgc2lsbGFzIGVuIGxhcyBjdWFsZXMgcHVlZGVzIGVzcGVyYXIgaGFzdGEgcXVlIGVzdMOpIHR1IHBlZGlkby4NCiANCg0KIyMgUHJvYmxlbWFzIElkZW50aWZpY2Fkb3MNCg0KIA0KRWwgQmVzbyBGcmFuY2VzIHViaWNhZGEgZW4gZWwgUmVhbCBQbGF6YSBkZSBTYWxhdmVycnkgcHJlc2VudGEgbG9zIHNpZ3VpZW50ZXMgcHJvYmxlbWFzOg0KIA0KDQojIyMjIFRpZW1wbyBkZSBlc3BlcmEgZW4gbGEgY29sYToNCg0KIA0KTGEgcHJvYmxlbcOhdGljYSBkZWwgdGllbXBvIGRlIGVzcGVyYSBlbiBsYSBjb2xhIHNlIHByZXNlbnRhIGNvbW8gdW5hIHByZW9jdXBhY2nDs24gc2lnbmlmaWNhdGl2YSBwYXJhIGxvcyBjbGllbnRlcywgZXNwZWNpYWxtZW50ZSBkdXJhbnRlIGxhcyBob3JhcyBwaWNvIGVuIGxhcyBxdWUgbGEgYWZsdWVuY2lhIGRlIHZpc2l0YW50ZXMgZXMgbcOhcyBpbnRlbnNhLiBFc3RlIGluY29udmVuaWVudGUgcHVlZGUgZ2VuZXJhciBmcnVzdHJhY2nDs24gZW50cmUgbG9zIGNsaWVudGVzLCBhZmVjdGFuZG8gc3UgZXhwZXJpZW5jaWEgeSBwZXJjZXBjacOzbiBkZWwgc2VydmljaW8gb2ZyZWNpZG8uDQogDQoNCiMjIyMgVGllbXBvIGRlIGF0ZW5jacOzbiBlbiBjYWphOg0KDQogDQpMYSBwZXJjZXBjacOzbiBkZSBxdWUgZWwgcHJvY2VzbyBkZSByZWdpc3RybyBkZSBwZWRpZG9zIGVuIGNhamEgZXMgbGVudG8geSBwb2NvIGVmaWNpZW50ZSBlcyB1bmEgaW5xdWlldHVkIHbDoWxpZGEgZXhwcmVzYWRhIHBvciBsb3MgY2xpZW50ZXMuIExhIGVmaWNpZW5jaWEgZW4gbGEgYXRlbmNpw7NuIGVuIGNhamEgZXMgY3J1Y2lhbCBwYXJhIHByb3BvcmNpb25hciB1bmEgZXhwZXJpZW5jaWEgZGUgc2VydmljaW8gcsOhcGlkYSB5IHNhdGlzZmFjdG9yaWEuDQogDQoNCiMjIyMgQ29uZ2VzdGlvbiBlbiBlbCBhcmVhIGRlIGNvbnN1bW86DQoNCiANCmVzcGVjaWFsbWVudGUgZW4gdW4gZW50b3JubyBjb21lcmNpYWwgY29tbyBlbCBDZW50cm8gQ29tZXJjaWFsIFNhbGF2ZXJyeSwgcHVlZGUgc2VyIHVuIGRlc2Fmw61vIHNpZ25pZmljYXRpdm8uIERhZGEgbGEgbmF0dXJhbGV6YSBkZWwgbHVnYXIsIGRvbmRlIGxvcyBjb25zdW1pZG9yZXMgdGllbmRlbiBhIGFwcm92ZWNoYXIgZWwgZXNwYWNpbyBwYXJhIHNvY2lhbGl6YXIsIHJlbGFqYXJzZSBvIHJlYWxpemFyIGFjdGl2aWRhZGVzIHNvY2lhbGVzLCBlcyBjb23Dum4gcXVlIGxhcyBtZXNhcyBlc3TDqW4gb2N1cGFkYXMgZHVyYW50ZSBwZXLDrW9kb3MgcHJvbG9uZ2Fkb3MuDQogDQoNCiMjIFByZWd1bnRhcyBkZSBJbnRlcmVzDQoNCiANCkluZmVyZW5jaWFsZXMNCg0Kwr9DdcOhbCBzZXLDrWEgZWwgZWZlY3RvIGVuIGxhIGF0cmFjY2nDs24gZGUgcG9zaWJsZXMgY2xpZW50ZXMgc2kgc2UgZGlzbWludXllIGxhIGNhbnRpZGFkIGRlIHBlcnNvbmFzIGVuIGxhIGZpbGEgZGUgZXNwZXJhIGVuIGxhIGVzdGFjacOzbiBkZSBwYWdvL3BlZGlkbywgdGVuaWVuZG8gZW4gY3VlbnRhIHVuIHNlcnZpY2lvIG3DoXMgw6FnaWwgZW4gY29tcGFyYWNpw7NuIGNvbiBlbCB0aWVtcG8gcHJvbWVkaW8gZW50cmUgbGxlZ2FkYXM/DQoNCsK/SGF5IGRpZmVyZW5jaWFzIHNpZ25pZmljYXRpdmFzIGVuIGxvcyB0aWVtcG9zIGRlIGVzcGVyYSBlbnRyZSBkaWZlcmVudGVzIG1lc2FzPw0KDQrCv1B1ZWRlcyBpbmZlcmlyIGxhIGRpc3RyaWJ1Y2nDs24gZGVsIHRpZW1wbyBlbiBxdWUgbG9zIGNsaWVudGVzIHNlIHJldGlyYW4gZGUgbGEgdGllbmRhPw0KDQrCv0hheSB1bmEgZGlmZXJlbmNpYSBzaWduaWZpY2F0aXZhIGVuIGVsIHRpZW1wbyBkZSBlc3BlcmEgZW50cmUgY2xpZW50ZXMgcXVlIG9jdXBhbiBtZXNhcyB5IGxvcyBxdWUgcGlkZW4gcGFyYSBsbGV2YXI/DQoNClByZWRpY3RpdmFzDQoNCkNvbnNpZGVyYW5kbyBxdWUgbG9zIGNsaWVudGVzIHF1ZSBzZSB2YW4gc2luIGNvbnN1bWlyIGdlbmVyYW4gcMOpcmRpZGFzIHBhcmEgZWwgbmVnb2Npbywgwr9jdcOhbnRvcyBjbGllbnRlcyBlbiBwcm9tZWRpbyBlbiBsYSBmaWxhIGRlbCBjYWplcm8gcHJvdm9jYW4gdW5hIG1heW9yIHByb2JhYmlsaWRhZCBkZSBxdWUgaGF5YSBjbGllbnRlcyByZW5lZ2Fkb3M/DQoNCsK/UHVlZGVzIGRlc2Fycm9sbGFyIHVuIG1vZGVsbyBwcmVkaWN0aXZvIHBhcmEgZXN0aW1hciBlbCB0aWVtcG8gcHJvbWVkaW8gcXVlIHVuIGNsaWVudGUgcGFzYXLDoSBlbiBsYSBjcmVwZXLDrWE/DQoNCkNhdXNhbGVzDQoNClNpIHNlIGJ1c2NhIHJlZHVjaXIgbG9zIHRpZW1wb3MgZGUgZXNwZXJhIGVuIGxhIGVzdGFjacOzbiBkZSBwYWdvL3BlZGlkbywgwr9jw7NtbyBhZmVjdGFyw61hIGVsIHRpZW1wbyB0b3RhbCBkZWwgc2lzdGVtYSBzaSBhbWJhcyBjYWphcyBkZSBsYSBlc3RhY2nDs24gZGUgcGFnby9wZWRpZG8gZXN0dXZpZXJhbiBhYmllcnRhcyBkZSBtYW5lcmEgY29udGludWE/DQoNCkNvbnNpZGVyYW5kbyBxdWUgbGEgem9uYSBkZSBhdGVuY2nDs24gZW4gY2FqYSBlcyBlbCBjdWVsbG8gZGUgYm90ZWxsYSBkZWwgc2lzdGVtYSDCv0PDs21vIGFmZWN0YXLDrWEgZWwgdGllbXBvIGRlIGF0ZW5jacOzbiBlbiBjYWphIGFsIHRpZW1wbyBhbCB0aWVtcG8gdG90YWwgZGVsIHNpc3RlbWE/LCB0aWVtcG8gZGUgZXNwZXJhLCB0YW1hw7FvIGRlIGxhIGNvbGENCg0Kwr9FeGlzdGUgdW5hIHJlbGFjacOzbiBjYXVzYWwgZW50cmUgZWwgbsO6bWVybyBkZSBtZXNhcyBvY3VwYWRhcyB5IGVsIHRpZW1wbyBkZSBlc3BlcmEgZW4gbGEgY29sYT8NCg0Kwr9FeGlzdGUgdW5hIHJlbGFjacOzbiBjYXVzYWwgZW50cmUgZWwgbsO6bWVybyBkZSBtZXNhcyBvY3VwYWRhcyB5IGVsIHRhbWHDsW8gZGUgbGEgY29sYT8NCiANCg0KIyMgSW5kaWNhZG9yZXMgZGUgSW50ZXJlcw0KDQpTZSBwbGFudGVhbiBsb3Mgc2lndWllbnRlcyBpbmRpY2Fkb3JlczoNCg0KIyMjIyBJbmRpY2Fkb3IgZGUgZWZpY2llbmNpYQ0KDQojIyMjIFwqJSBkZSBjbGllbnRlcyBxdWUgc2UgcmV0aXJhbg0KDQojIyMjIFRpZW1wbyBwcm9tZWRpbyBkZSBlc3BlcmEgZW4gY29sYSBoYXN0YSBzZXIgYXRlbmRpZG8NCg0KIyMjIyBUaWVtcG8gcHJvbWVkaW8gZGUgZXNwZXJhIGRlIHBlZGlkby4NCg0KIyMjIyBGbHVqbyBkZSBsbGVnYWRhIGRlIGNsaWVudGVzIHBvciBob3JhDQoNCiMjIExpbWl0YWNpb25lcw0KDQogDQpEZSBhY3VlcmRvIGEgbGEgdG9tYSBkZSBtdWVzdHJhcywgc2UgcHJpb3Jpem8gY29uc2lkZXJhYmxlbWVudGUgZWwgdGllbXBvIGRlIGVzcGVyYSBlbiBsYSBjb2xhLCBsYXMgY2FqYXMgeSBtZXNhcyBvY3VwYWRhcyBkdXJhbnRlIGxhcyBob3JhcyBwaWNvIGRlIGxhIG9wZXJhY2nDs24uDQoNClNlIHRvbcOzIGVuIGN1ZW50YSByZWFsaXphciBsYSByZWNvbGVjY2nDs24gZGUgZGF0b3MgZW4gZWwgNXRvIHBpc28gZGVsIENlbnRybyBjb21lcmNpYWwgZGViaWRvIGEgbGEgdWJpY2FjacOzbiBkZWwgbcOzZHVsby4NCiANCg0KIyMgVmFyaWFibGVzIHF1ZSBzZSB1dGlsaXrDsyBwYXJhIHJlY29nZXIgbnVlc3RybyBwcmUgbXVlc3RyZW8geSBtdWVzdHJhIHsuc2Nyb2xsYWJsZX0NCg0KLSAgIFRpcG8gZGUgQ2xpZW50ZQ0KLSAgIFRpcG8gZGUgVGFtYcOxbyBkZSBncnVwbyBkZWwgQ2xpZW50ZQ0KLSAgIFRhbWHDsW8gZGUgZ3J1cG8NCi0gICBIb3JhIGVuIHF1ZSBsbGVnYSB1biBudWV2byBjbGllbnRlDQotICAgSG9yYSBlbiBxdWUgaW5pY2lhIGVsIHBlZGlkbw0KLSAgIEhvcmEgZW4gcXVlIGZpbmFsaXphIGVsIHBlZGlkbw0KLSAgIEhvcmEgZGUgZW50cmVnYSBkZWwgcGVkaWRvDQotICAgSG9yYSBlbiBxdWUgc2UgcmV0aXJhIGRlIGxhIHRpZW5kYQ0KLSAgIE51bWVybyBkZSBtZXNhDQotICAgTnVtZXJvIGRlIGNhamENCi0gICBOdW1lcm8gZGUgY2FqYXMgYWN0aXZhDQoNCiFbXShwbGFudGlsbGEuanBlZykNCg0KIyMgVmFyaWFibGVzIGRlIGludGVyZXMNCg0KLSAgIFRpZW1wbyBlbnRyZSBsbGVnYWRhcw0KLSAgIFRpZW1wbyBkZSBlc3BlcmEgZW4gbGEgY29sYQ0KLSAgIFRpZW1wbyBkZSBlc3BlcmEgcGFyYSBlbCBwZWRpZG8NCi0gICBUaWVtcG8gZGUgZXNwZXJhIGhhc3RhIHJldGlyYXJzZQ0KLSAgIFRpZW1wbyB0b3RhbCBkZWwgc2lzdGVtYQ0KDQojIyBDYWxjdWxvIGRlbCB0YW1hw7FvIGRlIGxhIG11ZXN0cmENCg0KJFBcbGVmdChcbGVmdHxcb3ZlcmxpbmV7WH1fbi1cbXUgXHJpZ2h0fDxUXHJpZ2h0KVxnZSAxXDotXDpcYWxwaGEkDQoNCiRQXGxlZnQoXGxlZnR8XGZyYWN7XG92ZXJsaW5le1h9X24tXG11IFw6fXtcZnJhY3tcc2lnbWEgfXtcc3FydHtufX19XHJpZ2h0fDxcZnJhY3tUfXtcZnJhY3tcc2lnbWEgXDp9e1xzcXJ0e259fX1ccmlnaHQpXGdlIDFcOi1cOlxhbHBoYSQNCg0KJFxwaGkgXGxlZnQoXGZyYWN7VH17XGZyYWN7XHNpZ21hIH17XHNxcnR7bn19fVxyaWdodCktXHBoaSBcbGVmdCgtXGZyYWN7VH17XGZyYWN7XHNpZ21hIH17XHNxcnR7bn19fVxyaWdodClcZ2UgMS1cYWxwaGEkDQoNCiQyXHBoaSBcbGVmdChcZnJhY3tUfXtcZnJhY3tcc2lnbWEgfXtcc3FydHtufX19XHJpZ2h0KVxnZSAxLVxhbHBoYSQNCg0KJFxwaGkgXnstMX1cbGVmdChccGhpIFxsZWZ0KFxmcmFje1R9e1xmcmFje1xzaWdtYSB9e1xzcXJ0e259fX1ccmlnaHQpXHJpZ2h0KVxnZSBccGhpIF57LTF9XGxlZnQoXGZyYWN7Mi1cYWxwaGEgfXsyfVxyaWdodCkkDQoNCiRuXGdlIFxsZWZ0KHFub3JtXGxlZnQoXGZyYWN7TkN9ezJ9XHJpZ2h0KVxjZG90IFxsZWZ0KFxmcmFje1xzaWdtYSB9ezN9XHJpZ2h0KVxyaWdodCleMiQNCg0KYGBge3IsZWNobz1GQUxTRX0NCm48LWZ1bmN0aW9uKHZhcmlhYmxlLG5jLHRvbCl7DQogIHM8LXNkKHZhcmlhYmxlKQ0KICB6PC0obmMrMSkvMg0KICByZXR1cm4gKHJvdW5kKCgocy90b2wpKnFub3JtKHosMCwxKSleMikpDQp9DQpgYGANCg0KYGBge3IsZWNobz1GQUxTRSxtZXNzYWdlPUZBTFNFLHdhcm5pbmc9RkFMU0V9DQpkZjwtcmVhZF9kZWxpbSgiUHJlLmNzdiIsIA0KICAgIGRlbGltID0gIjsiLCBlc2NhcGVfZG91YmxlID0gRkFMU0UsIHRyaW1fd3MgPSBUUlVFKQ0KYGBgDQoNCmBgYHtyLGVjaG89RkFMU0V9DQpUTTwtZnVuY3Rpb24obmMsdG9sKXsNCiAgdGllbXBvLmNvbGE8LW4oZGYkYFNlZy4gVGllbXBvIGRlIGNvbGFgLG5jLzEwMCx0b2wpDQogIHRpZW1wby5lbnRyZWdhPC1uKGRmJGBTZWcuIFRpZW1wbyBkZSBlbnRyZWdhYCxuYy8xMDAsdG9sKQ0KICB0aWVtcG8uZGUuYXRlbmNpb248LW4oZGYkYFNlZy4gVGllbXBvIGRlIEF0ZW5jacOzbmAsbmMvMTAwLHRvbCkNCiAgdGllbXBvLmVudHJlLmxsZWdhZGE8LW4oZGYkYFNlZy4gVGllbXBvIGVudHJlIGxsZWdhZGFgLG5jLzEwMCx0b2wpDQogIHRpZW1wby5zaXN0ZW1hPC1uKGRmJGBTZWcuIFRpZW1wbyBkZWwgc2lzdGVtYWAsbmMvMTAwLHRvbCkNCg0KICBjYXQoIlxuVGllbXBvIGVudHJlIGxsZWdhZGE6ICIsdGllbXBvLmVudHJlLmxsZWdhZGEsIlx0IHNkOiIsIHNkKGRmJGBTZWcuIFRpZW1wbyBkZSBjb2xhYCkpDQogIGNhdCgiXG5UaWVtcG8gZW4gY29sYTogIix0aWVtcG8uY29sYSwiXHQgc2Q6Iiwgc2QoZGYkYFNlZy4gVGllbXBvIGRlIGVudHJlZ2FgKSkNCiAgY2F0KCJcblRpZW1wbyBkZSBBdGVuY2lvbjogIix0aWVtcG8uZGUuYXRlbmNpb24sIlx0IHNkOiIsIHNkKGRmJGBTZWcuIFRpZW1wbyBkZSBBdGVuY2nDs25gKSkNCiAgY2F0KCJcblRpZW1wbyBlc3BlcmEgZGUgcGVkaWRvOiAiLHRpZW1wby5lbnRyZWdhLCJcdCBzZDoiLCBzZChkZiRgU2VnLiBUaWVtcG8gZW50cmUgbGxlZ2FkYWApKQ0KICBjYXQoIlxuVGllbXBvIGRlbCBTaXN0ZW1hOiAiLHRpZW1wby5zaXN0ZW1hLCJcdCBzZDoiLCBzZChkZiRgU2VnLiBUaWVtcG8gZGVsIHNpc3RlbWFgKSkNCn0NCmBgYA0KDQojIyBUYW1hw7FvIGRlIGxhIG11ZXN0cmENCg0KYGBge3IsZWNobz1GQUxTRX0NClRNKDkwLDIwKQ0KYGBgDQoNCg0KDQoNCg0KDQoNCg0K</div>
 
 
 

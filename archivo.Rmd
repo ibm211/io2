@@ -3,76 +3,275 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-HOLA MUNDO JODANSE
+# Introducción
 
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+library(readr)
+library(tidyverse)
+library(modeest)
+library(fitdistrplus)
+require(reshape)
+```
 
-ANGELITA LA SECRETARIA ESTRELLA 
+## Descripción del Beso Francés
 
-aasdsdadaskdn
-asdjasd
-asd
-asd
-asd
-asd
+ 
+Beso Francés es una reconocida crepería que opera en diversas ubicaciones estratégicas, incluyendo zonas turísticas destacadas y centros comerciales de renombre, especificamente estamos estudiando el que esta ubicado en el Real Plaza de Salaverry. Su oferta principal se centra en la elaboración y venta de crepes tanto dulces como salados, complementados por una variedad de jugos naturales. Además, la empresa brinda atención a sus clientes a través de una plataforma en línea, permitiendo una experiencia de compra ágil y conveniente en el entorno digital.
+ 
 
+![Imagen 1 - Logo Beso Francés](logo.jpeg){fig-align="center"}
 
-SHARON 
+## Descripcion de los usuarios
 
+ 
+Los principales usuarios de 'Beso Francés' son familias y parejas. El restaurante atrae a las familias con su menú variado que satisface a todas las edades, mientras que las parejas eligen el lugar para disfrutar de una experiencia gastronómica íntima y romántica gracias a su ambiente acogedor y opciones de crepes dulces y salados.
+ 
 
+## Descripción del Proceso {.scrollable}
 
-ANGELICA milagros
+ 
+Disciplina de llegada de los individuos al sistema.
 
+La disciplina de llegada de los clientes es un proceso estocástico, ya que se puede modelar mediante variables aleatorias indexadas a través del tiempo. Además, se puede decir que el patrón de llegada es no estacionario, puesto que el patrón de llegadas de clientes varía con el tiempo. Por otro lado, también es importante identificar señales de impaciencia de los usuarios al llegar a la cola (impatient customers). Por ejemplo, un cliente puede decidir ni siquiera entrar a la cola porque la percibe demasiado larga (balk). También puede darse el caso de que el usuario sí entra a la cola pero se sale de esta porque se "cansa" de esperar (renegade). Otra situación es que el cliente compita por una mejor posición al cambiarse de cola (jockey).
+ 
 
+Disciplina de servicio en cada una de las estaciones en donde la unidad reciba los servicios.
 
+\# Estación de Entrada
 
-asdaso´daspdñ
-aasdl,dasñ
-das
-d
-asñd,d
-as,d
-añs,dasd,as
-d,as
-ñas,
-das,d
-ñas,d
-ñasd,
-asd
+ 
+El ingreso de los consumidores lo consideramos como un proceso estocástico y no estacionario, dado que no podemos prever la llegada de los mismos en el tiempo. Al realizar el muestreo de los datos, observamos que durante el intervalo de tiempo entre las 5:00 pm y las 8:00 pm, que coincide con la hora punta, la cantidad de clientes era superior.
+ 
 
-```{r}
-pexp(5,4/10)
+\# Estación de Pedido
+
+ 
+En la estación de pedido, el tipo de disciplina que se sigue en la cola de atención es "First Come - First Served" (FCFS), también conocido como FIFO (siglas de "First In, First Out", que en español significa "Primero en llegar, Primero en salir"). La política FCFS implica que el servicio se brinda en función del orden de llegada de los clientes. En otras palabras, aquel cliente que llega primero a un establecimiento es el que recibe la atención inicial y, a continuación, los demás clientes son atendidos en el orden en que llegaron, de manera sucesiva, hasta que se complete su tiempo de ejecución.
+ 
+
+Estación de Despacho
+
+ 
+En relación a la estación de Despacho, se implementan dos tipos de disciplina de llegada: FIFO y LCFS. En primer lugar, se emplea la disciplina FIFO (First In, First Out) para la preparación de pedidos. Esto implica que los pedidos se atienden en el orden en que los clientes los realizaron. Esta metodología se aplica cuando los pedidos pueden ser procesados en función del área, ya sea crepes o bebidas frías y calientes. En segundo lugar, se utiliza la disciplina LCFS (Last Come, First Served), también conocida como LIFO (Last In, First Out), para la atención de clientes. Bajo este enfoque, se prioriza al cliente más reciente en llegar, lo que puede ser relevante cuando hay una cola de espera en la preparación de crepes y no hay una cola en la preparación de bebidas. Es importante destacar que estas disciplinas de llegada influyen en la manera en que se atienden los pedidos en la estación de Despacho, ofreciendo diferentes prioridades y tiempos de atención en función de la situación y la demanda.
+ 
+
+Estación de Consumo
+
+ 
+La duración del consumo del pedido por parte de un cliente es impredecible, ya que está influenciada por factores como el tipo y tamaño de la orden, así como la cantidad de personas en el lugar. Estas variables en constante cambio hacen que el tiempo de consumo varía entre diferentes clientes. Como resultado, el proceso en la estación de consumo se caracteriza como un proceso estocástico no estacionario, debido a su naturaleza impredecible y dependiente de múltiples factores.
+ 
+
+Número de Estaciones de Servicio
+
+ 
+Las estaciones de servicio hacen referencia a los puntos donde ofrecen servicios, teniendo esto en cuenta, las estaciones de servicio implementadas en Beso Francés-Salaverry son: Estación de pedido/pago.- El módulo del local cuenta con dos cajas de pago en las cuales puedes pedir y pagar por los pedidos. Estación de consumo.- Cuentan con 13 mesas y 2 sillas en las cuales puedes esperar hasta que esté tu pedido.
+
+Número de Canales de servicio
+
+Sistema de canales de pago: Existe un sistema multicanal paralelo que alimenta 2 cajas de pago.
+
+Canal de entrega del pedido: Mediante este canal, dos personas designadas se encargan de entregar los pedidos a las mesas.
+ 
+
+## Tipos de Clientes
+
+ 
+Tenemos tres tipo de clientes, los cuales se explican a continuación:
+
+Tipo C: Cliente que consume en el local.
+
+Tipo LL: Cliente que pide para llevar.
+
+Tipo NC: Cliente que no hace ningun pedido.
+ 
+
+## Capacidad del sistema.
+
+ 
+La crepería se encuentra ubicado en el 4to piso del centro comercial Real Plaza Salaverry donde se pudieron notar algunas observaciones:
+
+-   El local cuenta con un módulo central en el pasillo central, por lo que no cuenta con un aforo designado para el número de personas debido a que es una zona muy transitada.
+
+-   Detrás del módulo, se encuentra un espacio con 8 cómodos sofás, cada uno acompañado de 2 sillas aparte, brindando un total de 24 asientos. por lo que permite una distribución flexible para adaptarse a las preferencias de los clientes y el flujo constante en el entorno comercial.
+
+-   Se puede observar que se genera una cola de 3 a 5 clientes durante las horas pico registradas en la operación del servicio.
+ 
+
+![Imagen 2 - Layout](dos.png){fig-align="center" width="675"}
+
+## Número de canales de servicio.
+
+ 
+-   Sistema de canales de pago: Existe un sistema multicanal paralelo que alimenta 2 cajas de pago. El servicio de canal no es excluyente pues un cliente puede pasar de una cola a otra (Ejemplo: Un usuario se encuentra en una cola pero ve que la otra cola es de menor tamaño así que decide cambiarse).
+
+-   Canal de entrega del pedido: Mediante este canal, dos personas designadas se encargan de entregar los pedidos a las mesas.
+ 
+
+## Número de estaciones de servicio.
+
+ 
+Las estaciones de servicio hacen referencia a los puntos donde ofrecen servicios, teniendo esto en cuenta, las estaciones de servicio implementadas en Beso Francés-Salaverry son:
+
+Estación de pedidos presencial.- El módulo del local cuenta con dos cajeros en los cuales puedes pedir y pagar por los pedidos.
+
+Estación de pedidos virtual.- La página web de Beso Francés cuenta con la carta y ofertas especiales, además de poder seleccionar si deseas recogerlo en la misma tienda o delivery.
+
+Área de espera.- Cuentan con 8 mesas y 2 sillas en las cuales puedes esperar hasta que esté tu pedido.
+ 
+
+## Problemas Identificados
+
+ 
+El Beso Frances ubicada en el Real Plaza de Salaverry presenta los siguientes problemas:
+ 
+
+#### Tiempo de espera en la cola:
+
+ 
+La problemática del tiempo de espera en la cola se presenta como una preocupación significativa para los clientes, especialmente durante las horas pico en las que la afluencia de visitantes es más intensa. Este inconveniente puede generar frustración entre los clientes, afectando su experiencia y percepción del servicio ofrecido.
+ 
+
+#### Tiempo de atención en caja:
+
+ 
+La percepción de que el proceso de registro de pedidos en caja es lento y poco eficiente es una inquietud válida expresada por los clientes. La eficiencia en la atención en caja es crucial para proporcionar una experiencia de servicio rápida y satisfactoria.
+ 
+
+#### Congestion en el area de consumo:
+
+ 
+especialmente en un entorno comercial como el Centro Comercial Salaverry, puede ser un desafío significativo. Dada la naturaleza del lugar, donde los consumidores tienden a aprovechar el espacio para socializar, relajarse o realizar actividades sociales, es común que las mesas estén ocupadas durante períodos prolongados.
+ 
+
+## Preguntas de Interes
+
+ 
+Inferenciales
+
+¿Cuál sería el efecto en la atracción de posibles clientes si se disminuye la cantidad de personas en la fila de espera en la estación de pago/pedido, teniendo en cuenta un servicio más ágil en comparación con el tiempo promedio entre llegadas?
+
+¿Hay diferencias significativas en los tiempos de espera entre diferentes mesas?
+
+¿Puedes inferir la distribución del tiempo en que los clientes se retiran de la tienda?
+
+¿Hay una diferencia significativa en el tiempo de espera entre clientes que ocupan mesas y los que piden para llevar?
+
+Predictivas
+
+Considerando que los clientes que se van sin consumir generan pérdidas para el negocio, ¿cuántos clientes en promedio en la fila del cajero provocan una mayor probabilidad de que haya clientes renegados?
+
+¿Puedes desarrollar un modelo predictivo para estimar el tiempo promedio que un cliente pasará en la crepería?
+
+Causales
+
+Si se busca reducir los tiempos de espera en la estación de pago/pedido, ¿cómo afectaría el tiempo total del sistema si ambas cajas de la estación de pago/pedido estuvieran abiertas de manera continua?
+
+Considerando que la zona de atención en caja es el cuello de botella del sistema ¿Cómo afectaría el tiempo de atención en caja al tiempo al tiempo total del sistema?, tiempo de espera, tamaño de la cola
+
+¿Existe una relación causal entre el número de mesas ocupadas y el tiempo de espera en la cola?
+
+¿Existe una relación causal entre el número de mesas ocupadas y el tamaño de la cola?
+ 
+
+## Indicadores de Interes
+
+Se plantean los siguientes indicadores:
+
+#### Indicador de eficiencia
+
+#### \*% de clientes que se retiran
+
+#### Tiempo promedio de espera en cola hasta ser atendido
+
+#### Tiempo promedio de espera de pedido.
+
+#### Flujo de llegada de clientes por hora
+
+## Limitaciones
+
+ 
+De acuerdo a la toma de muestras, se priorizo considerablemente el tiempo de espera en la cola, las cajas y mesas ocupadas durante las horas pico de la operación.
+
+Se tomó en cuenta realizar la recolección de datos en el 5to piso del Centro comercial debido a la ubicación del módulo.
+ 
+
+## Variables que se utilizó para recoger nuestro pre muestreo y muestra {.scrollable}
+
+-   Tipo de Cliente
+-   Tipo de Tamaño de grupo del Cliente
+-   Tamaño de grupo
+-   Hora en que llega un nuevo cliente
+-   Hora en que inicia el pedido
+-   Hora en que finaliza el pedido
+-   Hora de entrega del pedido
+-   Hora en que se retira de la tienda
+-   Numero de mesa
+-   Numero de caja
+-   Numero de cajas activa
+
+![](plantilla.jpeg)
+
+## Variables de interes
+
+-   Tiempo entre llegadas
+-   Tiempo de espera en la cola
+-   Tiempo de espera para el pedido
+-   Tiempo de espera hasta retirarse
+-   Tiempo total del sistema
+
+## Calculo del tamaño de la muestra
+
+$P\left(\left|\overline{X}_n-\mu \right|<T\right)\ge 1\:-\:\alpha$
+
+$P\left(\left|\frac{\overline{X}_n-\mu \:}{\frac{\sigma }{\sqrt{n}}}\right|<\frac{T}{\frac{\sigma \:}{\sqrt{n}}}\right)\ge 1\:-\:\alpha$
+
+$\phi \left(\frac{T}{\frac{\sigma }{\sqrt{n}}}\right)-\phi \left(-\frac{T}{\frac{\sigma }{\sqrt{n}}}\right)\ge 1-\alpha$
+
+$2\phi \left(\frac{T}{\frac{\sigma }{\sqrt{n}}}\right)\ge 1-\alpha$
+
+$\phi ^{-1}\left(\phi \left(\frac{T}{\frac{\sigma }{\sqrt{n}}}\right)\right)\ge \phi ^{-1}\left(\frac{2-\alpha }{2}\right)$
+
+$n\ge \left(qnorm\left(\frac{NC}{2}\right)\cdot \left(\frac{\sigma }{3}\right)\right)^2$
+
+```{r,echo=FALSE}
+n<-function(variable,nc,tol){
+  s<-sd(variable)
+  z<-(nc+1)/2
+  return (round(((s/tol)*qnorm(z,0,1))^2))
+}
+```
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+df<-read_delim("Pre.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r,echo=FALSE}
+TM<-function(nc,tol){
+  tiempo.cola<-n(df$`Seg. Tiempo de cola`,nc/100,tol)
+  tiempo.entrega<-n(df$`Seg. Tiempo de entrega`,nc/100,tol)
+  tiempo.de.atencion<-n(df$`Seg. Tiempo de Atención`,nc/100,tol)
+  tiempo.entre.llegada<-n(df$`Seg. Tiempo entre llegada`,nc/100,tol)
+  tiempo.sistema<-n(df$`Seg. Tiempo del sistema`,nc/100,tol)
+
+  cat("\nTiempo entre llegada: ",tiempo.entre.llegada,"\t sd:", sd(df$`Seg. Tiempo de cola`))
+  cat("\nTiempo en cola: ",tiempo.cola,"\t sd:", sd(df$`Seg. Tiempo de entrega`))
+  cat("\nTiempo de Atencion: ",tiempo.de.atencion,"\t sd:", sd(df$`Seg. Tiempo de Atención`))
+  cat("\nTiempo espera de pedido: ",tiempo.entrega,"\t sd:", sd(df$`Seg. Tiempo entre llegada`))
+  cat("\nTiempo del Sistema: ",tiempo.sistema,"\t sd:", sd(df$`Seg. Tiempo del sistema`))
+}
+```
+
+## Tamaño de la muestra
+
+```{r,echo=FALSE}
+TM(90,20)
 ```
 
 
 
-```{r}
-ppois(4,4/10)
-```
 
 
 
-$$
-P(N(1/4)/wep)
-
-$$
 
 
-
-$$
-f(x)=
-\begin{cases}
-& 2B^{-2}xe^{-({\frac{x}{B})}^2}, & 0 \leq x < 1\\
-& 0, &otros.casos
-\end{cases}
-$$
-
-
-asdasdasd
-asd
-asd
-asd
-as
-das
-d
-asd
-sad
