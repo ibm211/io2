@@ -233,7 +233,7 @@ TM(90,20)
 ```
 
 
-1. 
+1. CORREGIR
 
 Sabiendo que se tiene una Demanda en la tienda de ~ PPH(14 u/año)
 
@@ -243,6 +243,42 @@ Considerando que el problema dice que consideremos condiciones optimas
 
 El tiempo esperado de vida es de 6 meses
 
+Entonces la probabilidad de que no se malogre viene dada por la probabilidad de que se pidan las 10 ruedas antes de los 6 meses.
+
+P(N(1/2)<=10)= 0.9
+
+
+```{r}
+ppois(10,7)
+```
+
+
+
+2.
+
+Quedan 3 ruedas de las 10 ruedas
+
+Por lo que necesitamos saber el tiempo esperado de estas.
+
+Sabiendo que la tasa es 14 u/año entonces la tasa mensual es de 1.17 u/mensuales
+
+y sabiendo que el tiempo sigue una exp(1/1.17 u/mensuales)
+
+Entonces el tiempo esperado de 3 ruedas es de 3/1.17=2.57 meses
+
+
+3.
+
+Sabiendo que la tasa de demanda de 3 ruedas de queso es una PPH( 1/2.57 u/mes )
+
+y el tiempo de reposicion sigue una UNIF(15 dias,45 dias) ~ UNIF(0.5 meses, 1.5 meses)
+
+
+```{r}
+ppois(3,1/2.57)*punif(1,0.5,1.5)
+```
+
+4.X
 
 
 
