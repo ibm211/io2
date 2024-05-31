@@ -310,3 +310,5 @@ ENTONCES :
 DE 8PM A 9PM tenemos un lambda = 13.75
 DE 9PM A 11PM tenemos un lambda = 15
 
+Por lo que necesitamos hallar:
+P(N(3)-N(1)>=10|N(4)-N(1)=15)
