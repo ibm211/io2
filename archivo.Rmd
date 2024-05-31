@@ -233,6 +233,17 @@ TM(90,20)
 ```
 
 
+1. 
 
-p(N(2)>1)=e^5
+Sabiendo que se tiene una Demanda en la tienda de ~ PPH(14 u/año)
+
+El tiempo de vida del queso es de 8 semanas y en condiciones optimas de 6 meses
+
+Considerando que el problema dice que consideremos condiciones optimas 
+
+El tiempo esperado de vida es de 6 meses
+
+
+
+
 
